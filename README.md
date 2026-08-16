@@ -1,21 +1,19 @@
 # Pawfect Pet Supplies — Catalog & Discovery
 
-Part of a microfrontend e-commerce project for a pet supplies store. This repository contains the **Catalog & Discovery** component, responsible for product browsing, search, filtering, and product details.
-
+Part of a microfrontend e-commerce project for a pet supplies store. This repository contains the Catalog & Discovery component, responsible for product browsing, search, filtering, and product details.
 Built as an independent, standalone microfrontend as part of a Component-Based Software Engineering (CBSE) group project, where each team member owns one component built with a different framework.
 
 ## Role in the system
 
 | Component | Owner | Framework | UI Library |
-|---|---|---|---|
+| :--- | :--- | :--- | :--- |
 | **Catalog & Discovery** (this repo) | Omar | Vue 3 | Vuetify |
-| Cart & Checkout | Yousef | React | MUI |
-| Account & Orders | — | Lit | Material Web |
+| **Cart & Checkout** | Yousef | React | MUI |
+| **Account & Orders** | Rahaf | Lit | Material Web |
 
-A separate **shell** application integrates the three live components together.
+*A separate shell application integrates the three live components together.*
 
 ## Features
-
 - Live product search by name
 - Filtering by pet category (Dogs, Cats, Birds, Accessories) and brand
 - Price range filtering (min/max)
@@ -25,54 +23,15 @@ A separate **shell** application integrates the three live components together.
 - Empty-state handling when no products match the current filters
 
 ## Tech stack
-
-- [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`)
-- [Vuetify 3](https://vuetifyjs.com/) for Material Design components
-- [Vite](https://vitejs.dev/) as the build tool and dev server
+- Vue 3 (Composition API, `<script setup>`)
+- Vuetify 3 for Material Design components
+- Vite as the build tool and dev server
 
 ## Project structure
-
-```
+```text
 pet-catalog-vue/
 ├── package.json
 ├── index.html
 └── src/
     ├── main.js      # App entry point, Vuetify setup
-    └── App.vue       # Catalog UI: search, filters, product grid, details modal
-```
-
-## Getting started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (LTS version recommended)
-
-### Installation
-
-```bash
-git clone https://github.com/omarhazeem/pet-catalog-vue.git
-cd pet-catalog-vue
-npm install
-```
-
-### Run locally
-
-```bash
-npm run dev
-```
-
-The app will be available at `http://localhost:5173`.
-
-### Build for production
-
-```bash
-npm run build
-```
-
-## Integration notes
-
-This component is designed to run standalone and be embedded into a shell application via a live deployment URL. It does not depend on the other microfrontends (Cart & Checkout, Account & Orders) and manages its own local state.
-
-## AI usage disclosure
-
-Parts of this project (component scaffolding and UI implementation) were developed with AI assistance, based on design references and iterative refinement to match the project's Figma mockups.
+    └── App.vue      # Catalog UI: search, filters, product grid, details modal
