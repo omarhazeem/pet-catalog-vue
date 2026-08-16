@@ -1,14 +1,16 @@
-# 🐾 Pet Supplies E-Commerce — Catalog & Discovery
+# Pet Supplies E-Commerce — Catalog & Discovery
 
-A standalone **Catalog & Discovery microfrontend** for a pet supplies e-commerce platform. This component allows users to browse products, search for products, apply filters, sort results, and view detailed product information.
+This repository contains the **Catalog & Discovery** part of a pet supplies e-commerce website.
 
-This project was developed as part of a **Component-Based Software Engineering (CBSE)** group project. Each team member is responsible for an independent microfrontend using a different frontend framework and UI library.
+The main purpose of this component is to help users browse available pet products, search for a specific product, apply different filters, sort the results, and view more information about each product.
+
+This component is developed as an independent microfrontend as part of a **Component-Based Software Engineering (CBSE)** group project. Each member of the group is responsible for a different part of the system and uses a different frontend framework.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-The e-commerce system is divided into three independent microfrontends:
+The e-commerce project is divided into three main microfrontends:
 
 | Component               | Owner  | Framework | UI Library   |
 | ----------------------- | ------ | --------- | ------------ |
@@ -16,65 +18,74 @@ The e-commerce system is divided into three independent microfrontends:
 | **Cart & Checkout**     | Yousef | React     | MUI          |
 | **Account & Orders**    | Rahaf  | Lit       | Material Web |
 
-A separate **Shell Application** integrates the three microfrontends into one complete e-commerce application.
+A separate shell application is used to bring the three components together as one application.
 
 ---
 
-## 🎯 Catalog & Discovery
+## Catalog & Discovery
 
-The Catalog & Discovery component focuses on helping customers find and explore pet products easily.
+The Catalog & Discovery component handles the product browsing part of the website.
 
-The component provides:
+Users can view products and use different options to find what they are looking for. The component also provides a product details view with information such as the product description, rating, price, and stock status.
 
-* Product browsing
-* Live product search
-* Product filtering
-* Price range filtering
-* Product sorting
-* Product details
-* Stock information
-* Responsive product layout
-* Empty-state handling
+### Main responsibilities
+
+* Display products
+* Search for products
+* Filter products
+* Sort products
+* Display product information
+* Show product availability
+* Handle cases where no products match the selected options
+* Provide a responsive interface
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔎 Product Search
+### Product Search
 
-Users can search for products by name.
+Users can search for products by entering the product name.
 
-The product list updates according to the entered search term and displays an empty-state message when no matching products are found.
+The product list is updated based on the search input, making it easier to find a specific product.
 
-### 🐾 Product Filtering
+If there are no products that match the search, an empty-state message is displayed.
 
-Products can be filtered according to:
+### Product Categories
 
-* Pet category
+Products can be filtered according to their category:
 
-  * Dogs
-  * Cats
-  * Birds
-  * Accessories
-* Brand
+* Dogs
+* Cats
+* Birds
+* Accessories
+
+### Brand Filter
+
+Users can also filter products by brand to make it easier to find products from a specific company.
+
+### Price Filter
+
+The catalog includes a price range filter where users can enter:
+
 * Minimum price
 * Maximum price
 
-Filters can be combined to make product discovery easier.
+This allows users to display products within a selected price range.
 
-### ↕️ Product Sorting
+### Product Sorting
 
-Products can be sorted according to:
+Products can be sorted using different options:
 
 * Most Popular
 * Price
 * Rating
 
-### 🛍️ Product Grid
+### Product Cards
 
-Products are displayed in a responsive grid.
+Each product is displayed in a product card.
 
-Each product card can display:
+Depending on the product, the card can show:
 
 * Product image
 * Product name
@@ -83,165 +94,259 @@ Each product card can display:
 * Price
 * Rating
 * Stock status
-* Product badges
+* Special badges
 
-Available badges include:
+The available badges include:
 
-* ⭐ Best Seller
-* 🏷️ Sale
-* ❌ Out of Stock
+* Best Seller
+* Sale
+* Out of Stock
 
-### 📋 Product Details
+### Product Details
 
-Users can select a product to view additional information through a product details modal.
+Clicking on a product allows the user to view more details in a modal.
 
-The modal includes:
+The product details include:
 
 * Product name
 * Product description
 * Price
 * Rating
 * Stock status
-* Product information
+* Other available product information
 
-### 📭 Empty State
+### Empty State
 
-If no products match the current search or filters, the application displays a clear message informing the user that no matching products were found.
-
----
-
-## 🛠️ Technology Stack
-
-| Technology           | Purpose                           |
-| -------------------- | --------------------------------- |
-| **Vue 3**            | Frontend framework                |
-| **Composition API**  | Component logic                   |
-| **`<script setup>`** | Vue component syntax              |
-| **Vuetify 3**        | UI components and Material Design |
-| **Vite**             | Development server and build tool |
-| **JavaScript**       | Application functionality         |
-| **HTML/CSS**         | Structure and styling             |
+If the selected search or filters do not return any products, the application displays a message instead of showing an empty product area.
 
 ---
 
-## 📁 Project Structure
+## Technologies Used
 
-```text
+The project uses the following technologies:
+
+### Vue 3
+
+Vue 3 is used as the main frontend framework for developing the Catalog & Discovery component.
+
+### Composition API
+
+The Composition API is used to organize the component logic and handle the application state.
+
+### Vue `<script setup>`
+
+The `<script setup>` syntax is used to keep Vue components simpler and easier to manage.
+
+### Vuetify 3
+
+Vuetify is used to provide the user interface components and Material Design styling.
+
+### Vite
+
+Vite is used as the development server and build tool for the project.
+
+### JavaScript
+
+JavaScript is used for the application logic, including searching, filtering, sorting, and handling product data.
+
+### HTML & CSS
+
+HTML and CSS are used for the structure and additional styling of the application.
+
+---
+
+## Project Structure
+
+```text id="t1s9q8"
 pet-catalog-vue/
 │
 ├── package.json
+│
 ├── index.html
 │
 └── src/
     │
     ├── main.js
-    │   └── Application entry point and Vuetify setup
     │
     └── App.vue
-        └── Catalog interface
-            ├── Search
-            ├── Filters
-            ├── Sorting
-            ├── Product Grid
-            └── Product Details Modal
 ```
+
+### `package.json`
+
+Contains the project information, scripts, and required dependencies.
+
+### `index.html`
+
+The main HTML page used as the entry point for the Vue application.
+
+### `src/main.js`
+
+The main entry point of the Vue application.
+
+It is responsible for starting the application and configuring Vuetify.
+
+### `src/App.vue`
+
+Contains the main Catalog & Discovery interface, including:
+
+* Search
+* Filters
+* Sorting
+* Product grid
+* Product cards
+* Product details modal
+* Empty-state handling
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
-The following software is required to run the project:
+To run the project locally, the following are required:
 
 * Node.js
 * npm
 
-Check the installed versions using:
+You can check whether they are installed using:
 
-```bash
+```bash id="y1a8hs"
 node --version
 npm --version
 ```
 
 ---
 
-## 🚀 Installation
+## Installation
 
-Clone or download the repository and open the project directory:
+First, open the project folder:
 
-```bash
+```bash id="8cl9kf"
 cd pet-catalog-vue
 ```
 
-Install the required dependencies:
+Then install the project dependencies:
 
-```bash
+```bash id="8v7gqo"
 npm install
 ```
 
+This will install Vue, Vuetify, Vite, and the other dependencies required by the project.
+
 ---
 
-## ▶️ Running the Project
+## Running the Project
 
-Start the development server using:
+To start the development server:
 
-```bash
+```bash id="q4kz8f"
 npm run dev
 ```
 
-After starting the server, Vite will provide a local URL that can be opened in a web browser.
+After running the command, Vite will display a local address in the terminal. Open this address in a browser to use the application.
 
 ---
 
-## 📦 Production Build
+## Production Build
 
-To create a production build:
+To create a production version of the project:
 
-```bash
+```bash id="z6d2ya"
 npm run build
 ```
 
-The production files will be generated in the build output directory.
+This creates the files needed for running the project in a production environment.
 
 ---
 
-## 🔍 Preview Production Build
+## Preview Production Build
 
-To preview the production version locally:
+The production build can be tested locally using:
 
-```bash
+```bash id="c7a2br"
 npm run preview
 ```
 
 ---
 
-## 🧩 Microfrontend Architecture
+## Microfrontend Architecture
 
-The project follows a **microfrontend architecture**, where different parts of the e-commerce application are developed independently.
+The project uses a microfrontend approach. Instead of building the whole website as one large application, the system is divided into smaller independent components.
 
-```text
-                       E-Commerce Shell
-                              │
-             ┌────────────────┼────────────────┐
-             │                │                │
-             ▼                ▼                ▼
-      Catalog &          Cart &          Account &
-      Discovery          Checkout         Orders
-          │                 │                │
-        Vue 3             React             Lit
-       Vuetify              MUI        Material Web
+```text id="l6d0ys"
+                         E-Commerce Shell
+                                |
+                ┌───────────────┼───────────────┐
+                |               |               |
+                ▼               ▼               ▼
+       Catalog & Discovery   Cart & Checkout   Account & Orders
+                |               |               |
+              Vue 3           React             Lit
+             Vuetify            MUI        Material Web
 ```
 
-Each microfrontend has its own technology stack and responsibility while being designed to work as part of the complete application.
+Each microfrontend has its own framework and UI library.
+
+The Catalog & Discovery component is responsible only for the product browsing and discovery part of the system.
 
 ---
 
-## 🔄 Component Responsibility
+## User Flow
 
-### Catalog & Discovery — Omar
+The main user flow for the Catalog & Discovery component is:
+
+```text id="xq7g4h"
+Open Catalog
+     |
+     ▼
+View Products
+     |
+     ├── Search by Product Name
+     |
+     ├── Filter by Category
+     |
+     ├── Filter by Brand
+     |
+     ├── Set Price Range
+     |
+     └── Sort Products
+              |
+              ▼
+        Select a Product
+              |
+              ▼
+       View Product Details
+```
+
+This allows the user to find products using different combinations of search, filters, and sorting options.
+
+---
+
+## Responsive Design
+
+The interface is designed to work on different screen sizes.
+
+The layout can be used on:
+
+* Desktop
+* Tablet
+* Mobile
+
+The product grid and other interface elements adjust according to the available screen size.
+
+---
+
+## Team Responsibilities
+
+| Team Member | Responsibility      | Framework | UI Library   |
+| ----------- | ------------------- | --------- | ------------ |
+| **Omar**    | Catalog & Discovery | Vue 3     | Vuetify      |
+| **Yousef**  | Cart & Checkout     | React     | MUI          |
+| **Rahaf**   | Account & Orders    | Lit       | Material Web |
+
+### Omar — Catalog & Discovery
 
 Responsible for:
 
-* Product browsing
+* Product catalog
 * Product search
 * Product filtering
 * Product sorting
@@ -250,100 +355,51 @@ Responsible for:
 * Stock status
 * Responsive catalog interface
 
-### Cart & Checkout — Yousef
+### Yousef — Cart & Checkout
 
 Responsible for:
 
 * Shopping cart
 * Cart items
-* Quantity management
-* Checkout process
+* Quantity changes
+* Checkout functionality
 
-### Account & Orders — Rahaf
+### Rahaf — Account & Orders
 
 Responsible for:
 
 * User account
 * Account information
 * Order history
-* Order-related functionality
+* Orders-related functionality
 
 ---
 
-## 📱 Responsive Design
+## References & Acknowledgments
 
-The interface is designed to provide a good user experience across different screen sizes:
+During the development of the project, documentation and different learning resources were used to understand the technologies and features required for the component.
 
-* 💻 Desktop
-* 📱 Mobile
-* 📲 Tablet
+The main topics referred to were:
 
-The product grid and interface elements adapt to the available screen size.
+* Vue 3 documentation
+* Vuetify 3 documentation
+* Vite documentation
+* JavaScript documentation
+* Microfrontend architecture concepts
+* Responsive web design
 
----
-
-## 🧪 Main User Flow
-
-```text
-Open Catalog
-     │
-     ▼
-Browse Products
-     │
-     ├──── Search by Name
-     │
-     ├──── Filter by Category
-     │
-     ├──── Filter by Brand
-     │
-     ├──── Set Price Range
-     │
-     └──── Sort Products
-                │
-                ▼
-          Select Product
-                │
-                ▼
-        View Product Details
-```
+These resources were used to understand the technologies and solve development-related issues while building the project according to the CBSE requirements.
 
 ---
 
-## 👥 Team
-
-| Team Member | Component           | Technology         |
-| ----------- | ------------------- | ------------------ |
-| **Omar**    | Catalog & Discovery | Vue 3 + Vuetify    |
-| **Yousef**  | Cart & Checkout     | React + MUI        |
-| **Rahaf**   | Account & Orders    | Lit + Material Web |
-
----
-
-## 🎓 Course Project
+## Academic Project
 
 This project was developed as part of a **Component-Based Software Engineering (CBSE)** group project.
 
-The project demonstrates the development of independent frontend components using different technologies and their integration within a microfrontend-based e-commerce system.
+The main goal of the project is to build different independent components using different frontend technologies and combine them into one e-commerce system.
 
 ---
 
-## 📚 References & Acknowledgments
+## License
 
-During the development of this project, different technical resources and documentation were consulted to understand and implement the required features and technologies.
-
-The main references included documentation and learning resources related to:
-
-* Vue 3
-* Vuetify 3
-* Vite
-* JavaScript
-* Microfrontend Architecture
-* Responsive Web Design
-
-These resources were used as references during development, while the implementation and component design were developed according to the requirements of the CBSE group project.
-
----
-
-## 📄 License
-
-This project was developed for academic purposes as part of the **Component-Based Software Engineering (CBSE)** course project.
+This project is developed for academic purposes as part of the CBSE course project.
