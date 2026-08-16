@@ -42,7 +42,7 @@ The Catalog & Discovery component handles the product browsing part of the websi
 ### 🔎 Product Search
 Users can search for products by entering the product name. The product list is updated based on the search input, making it easier to find a specific product. If there are no products that match the search, an empty-state message is displayed.
 
-### 🐾 Product Categories
+### 🐶 Product Categories
 Products can be filtered according to their category:
 - Dogs
 - Cats
@@ -69,9 +69,12 @@ Products can be sorted using different options:
 Each product is displayed in a product card. Depending on the product, the card can show:
 - Product image
 - Product name
-- Brand & Category
-- Price & Rating
-- Stock status & Special badges
+- Brand
+- Category
+- Price
+- Rating
+- Stock status
+- Special badges
 
 **The available badges include:**
 - ⭐ Best Seller
@@ -80,8 +83,10 @@ Each product is displayed in a product card. Depending on the product, the card 
 
 ### 📋 Product Details
 Clicking on a product allows the user to view more details in a modal. The product details include:
-- Product name & Description
-- Price & Rating
+- Product name
+- Product description
+- Price
+- Rating
 - Stock status
 - Other available product information
 
@@ -119,11 +124,11 @@ To run the project locally, **Node.js** and **npm** are required. You can check 
 
 ## 🚀 Installation & Execution
 
-1. **Open the project folder:** Navigate to your project directory using **cd pet-catalog-vue**.
-2. **Install dependencies:** Run **npm install** to install Vue, Vuetify, Vite, and other required packages.
-3. **Run the development server:** Start the server using **npm run dev**. Open the local URL provided in the terminal in your browser.
-4. **Production Build:** Create the production-ready build using **npm run build**.
-5. **Preview Build:** Preview the production build locally using **npm run preview**.
+1. **Open the project folder:** Open terminal and navigate using **cd pet-catalog-vue**.
+2. **Install dependencies:** Run **npm install** to install Vue, Vuetify, Vite, and required dependencies.
+3. **Run the development server:** Start using **npm run dev**. Open the local address displayed in the terminal in your browser.
+4. **Production Build:** Create a production build using **npm run build**.
+5. **Preview Production Build:** Test the build locally using **npm run preview**.
 
 ---
 
@@ -142,23 +147,28 @@ E-Commerce Shell
 
 ## 🧪 User Flow
 
-Open Catalog ➔ View Products ➔ Apply Search / Filters / Sorting ➔ Select a Product ➔ View Product Details
+Open Catalog ➔ View Products ➔ Search / Filter / Sort ➔ Select a Product ➔ View Product Details
 
 ---
 
 ## 📱 Responsive Design
 
-The interface is designed to work on different screen sizes, including Desktop, Tablet, and Mobile devices. The product grid and other interface elements adjust according to the available screen space.
+The interface is designed to work on different screen sizes:
+- 💻 Desktop
+- 📲 Tablet
+- 📱 Mobile
+
+*The product grid and other interface elements adjust according to the available screen size.*
 
 ---
 
 ## 👥 Team Responsibilities
 
-| Team Member | Component | Technology |
-| :--- | :--- | :--- |
-| **Omar** | Catalog & Discovery | Vue 3 + Vuetify |
-| **Yousef** | Cart & Checkout | React + MUI |
-| **Rahaf** | Account & Orders | Lit + Material Web |
+| Team Member | Component | Framework | UI Library |
+| :--- | :--- | :--- | :--- |
+| **Omar** | Catalog & Discovery | Vue 3 | Vuetify |
+| **Yousef** | Cart & Checkout | React | MUI |
+| **Rahaf** | Account & Orders | Lit | Material Web |
 
 ### Omar — Catalog & Discovery
 Responsible for: Product catalog, Product search, Product filtering, Product sorting, Product cards, Product details, Stock status, and Responsive catalog interface.
@@ -173,7 +183,7 @@ Responsible for: User account, Account information, Order history, and Orders-re
 
 ## 📚 References & Acknowledgments
 
-During the development of the project, documentation and learning resources were used to understand the required technologies:
+During the development of the project, documentation and learning resources were used:
 - Vue 3 documentation
 - Vuetify 3 documentation
 - Vite documentation
